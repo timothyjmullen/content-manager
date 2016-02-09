@@ -1,0 +1,6 @@
+
+.dropdown {float:right;}
+#dLabel img {display:inline-block;vertical-align:middle;height:30px;width:30px;margin:10px 0;}
+.navbar-header {width:100%}
+.nav {display:inline-block;width:150px;text-align:right;color:#ccc;font-size:11px;}
+.nav:hover {color:#FFF;}

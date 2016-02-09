@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Content Manager</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Manage your email content and templates in an easy builder." />
+  <meta name="keywords" content="content manager, email" />
+  <meta name="author" content="Tim Mullen" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="lib/theme.css"/>
+
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+</head>
+<body>
+
+<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Content Manager</a>
+
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li> <a href="#/">Login</a>
+
+                </li>
+                <li> <a href="#/register">Register</a>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="container" class="container">
+    <!-- REGISTER -->
+    <form id="frmRegister" role="form">
+         <h2>Register</h2>
+
+        <div class="form-group">
+            <label for="txtRegEmail">Email address</label>
+            <input required type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
+        </div>
+        <div class="form-group">
+            <label for="txtRegPass">Password</label>
+            <input required type="password" class="form-control" id="txtPass" placeholder="Password" name="password" accept-charset="utf-8" />
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
+    </form>
+    <!-- / REGISTER -->
+    <!-- LOGIN -->
+    <form id="frmLogin" role="form">
+         <h2>Login</h2>
+
+        <div class="form-group">
+            <label for="txtLogEmail">Email address</label>
+            <input type="email" class="form-control" id="txtLogEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
+        </div>
+        <div class="form-group">
+            <label for="txtLogPass">Password</label>
+            <input type="password" class="form-control" id="txtLogPass" placeholder="Password" name="password" accept-charset="utf-8" />
+            <a href="#" style="margin-top:5px;display:inline-block;;" id="iforgot">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+    </form>
+    <!-- / LOGIN -->
+    <hr />
+    <!-- ALERT BOX -->
+    <div id="alert" class="alert" role="alert">
+         <h4 id="alert-title"></h4>
+
+        <p id="alert-detail"></p>
+    </div>
+    <!-- / ALERT BOX -->
+</div>
+<script src="lib/login.js"></script>
+</body>
+</html>
