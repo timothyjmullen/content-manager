@@ -9,37 +9,37 @@
   <meta name="author" content="Tim Mullen" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
   <link rel="stylesheet" href="lib/theme.css"/>
-
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300|Open+Sans:400,700,200' rel='stylesheet' type='text/css'>
   <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
 </head>
 <body>
 
-<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+<header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
             <a href="#" class="navbar-brand">Content Manager</a>
 
         </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li> <a href="#/">Login</a>
-
-                </li>
-                <li> <a href="#/register">Register</a>
-
-                </li>
-            </ul>
-        </nav>
     </div>
 </header>
-<div id="container" class="container">
+<div id="container" class="container-fluid">
     <!-- REGISTER -->
-    <form id="frmRegister" role="form">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-6 col-md-offset-4 col-lg-offset-4 col-sm-offset-3">
+        <div class="panel panel-default">
+          <div class="zero-clipboard"><span class="btn-clipboard" id="regorlog">Register</span></div>
+      <div class="panel-body">
+    <form id="frmRegister" class="hide" role="form">
          <h2>Register</h2>
-
+<br />
+        <div class="form-group">
+            <label for="txtRegNAme">Name</label>
+            <input required type="text" class="form-control" id="txtName" placeholder="Enter name" name="email" accept-charset="utf-8" />
+        </div>
         <div class="form-group">
             <label for="txtRegEmail">Email address</label>
             <input required type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
@@ -48,13 +48,17 @@
             <label for="txtRegPass">Password</label>
             <input required type="password" class="form-control" id="txtPass" placeholder="Password" name="password" accept-charset="utf-8" />
         </div>
-        <button type="submit" class="btn btn-default">Register</button>
+        <div class="form-group">
+            <label for="txtRegPass2">Confirm Password</label>
+            <input required type="password" class="form-control" id="txtPass2" placeholder="Confirm Password" name="password2" accept-charset="utf-8" />
+        </div>
+        <button type="submit" class="btn btn-cta">Register</button>
     </form>
     <!-- / REGISTER -->
     <!-- LOGIN -->
     <form id="frmLogin" role="form">
          <h2>Login</h2>
-
+<br />
         <div class="form-group">
             <label for="txtLogEmail">Email address</label>
             <input type="email" class="form-control" id="txtLogEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
@@ -64,18 +68,25 @@
             <input type="password" class="form-control" id="txtLogPass" placeholder="Password" name="password" accept-charset="utf-8" />
             <a href="#" style="margin-top:5px;display:inline-block;;" id="iforgot">Forgot password?</a>
         </div>
-        <button type="submit" class="btn btn-default">Login</button>
+        <button type="submit" class="btn btn-cta">Login</button>
     </form>
     <!-- / LOGIN -->
     <hr />
     <!-- ALERT BOX -->
-    <div id="alert" class="alert" role="alert">
-         <h4 id="alert-title"></h4>
 
-        <p id="alert-detail"></p>
+    <div id="alert" class="alert" role="alert">
     </div>
     <!-- / ALERT BOX -->
+  </div></div></div></div>
+
+  <hr />
+  <div class="container-fluid">
+  <p class="text-center foot">&copy;<script>document.write(new Date().getFullYear())</script> Tim Mullen</p>
+  </div>
 </div>
 <script src="lib/login.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </body>
 </html>
