@@ -1,5 +1,5 @@
 body {
-  background-color:#C7EDE8;
+  background-color:#e6e6e6;
   font-family:'Open Sans', Arial, sans-serif;
   color:#212121;
 }
@@ -9,17 +9,21 @@ a {
 a:hover {
   color:#FFC107;
 }
-.h1, .h2, .h3, h1, h2, h3 {
+.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
   margin-top: 10px;
+  font-family:'Open Sans', sans-serif;
 }
 hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #B6B6B6;
+  border-top: 1px solid #e6e6e6;
   margin: 1em 0;
   padding: 0;
-  color:#B6B6B6;
+  color:#D3D3D3;
+}
+.container-fluid {
+  padding:0 3%;
 }
 /* ALERTS
 //////////////////////////////*/
@@ -35,16 +39,15 @@ hr {
   float:right;
 }
 .navbar {
-    background-color:#607D8B;
-    border-top:5px solid #455A64;
-    box-shadow: 0px 4px 4px #CFD8DC;
-    min-height:40px;
+    border-bottom:#e6e6e6;
+    min-height:50px;
+    background-color:#fff;
 }
 #dLabel img {
   display:inline-block;
   vertical-align:middle;
-  height:20px;
-  width:20px;
+  height:30px;
+  width:30px;
   border-radius:20px;
   margin:10px 0;
 }
@@ -52,29 +55,59 @@ hr {
   width:100%
 }
 .navbar-brand {
-  font-family:Raleway, sans-serif;
+  font-family:'Pacifico', sans-serif;
+  font-size:24px;
   font-weight:300;
-  color:#fff;
-  height:40px;
-  padding:10px 15px;
+  height:50px;
+  padding:15px 15px;
 }
 .nav {
   display:inline-block;
-  width:150px;
+  width:130px;
   text-align:right;
-  color:#fff;
+  color:#FF9800;
   font-size:13px;
 }
 .nav span {
   font-size:11px;
 }
 .nav:hover {
-  color:#FF9800;
+  color:#FFC107;
 }
 /* FOOTER
 /////////////////////////////////*/
 .foot {
-  color:#999;
+  color:#fff;
+  padding:30px;
+  background-color:#8f8c91;
+}
+.footer-brand {
+  font-family:'Antic Slab', sans-serif;
+  font-size:20px;
+  font-weight:300;
+  display:inline-block;
+  margin:0 0 15px 0;
+}
+.footer-brand:hover {
+  text-decoration:none;
+}
+footer {
+  margin-top:20px;
+}
+footer a {
+  color:#fff;
+}
+footer a:hover {
+  color:#fff;
+}
+/* PANEL
+/////////////////////////////////*/
+.panel-solid {
+  border:none;
+  border-radius:0;
+}
+.panel-body {
+  padding-top:25px;
 }
 /* LOGIN & REGISTER
 /////////////////////////////////*/
@@ -119,6 +152,13 @@ hr {
   color:#fff;
   background-color:#FF9800;
   border-color:#A7DBD8;
+}
+/* FORMS
+//////////////////////////////*/
+.form-control {
+  border-radius:0;
+  box-shadow:none;
+  -webkit-box-shadow:none;
 }
 /* LAODING
 //////////////////////////////*/
