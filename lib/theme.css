@@ -37,6 +37,14 @@ hr {
 //////////////////////////////*/
 .dropdown {
   float:right;
+  text-align:right;
+}
+.dropdown-menu {
+  left:auto;
+  right:0;
+}
+.nav>li.active {
+  background-color:#f0f0f0;
 }
 .navbar {
     border-bottom:#e6e6e6;
@@ -62,9 +70,6 @@ hr {
   padding:15px 15px;
 }
 .nav {
-  display:inline-block;
-  width:130px;
-  text-align:right;
   color:#FF9800;
   font-size:13px;
 }
