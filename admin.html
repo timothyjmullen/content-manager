@@ -67,8 +67,15 @@
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane" id="teams">
+                <h4 id="sub-head-1">Create New Team</h4>
+                <form id="profile" role="form">
+                  <div class="form-group">
+                      <label for="txtTeamName">Team Name</label>
+                      <input class="form-control" id="txtTeamName" placeholder="Enter team name" name="name" accept-charset="utf-8" />
+                  </div>
+                </form>
                 <h4 id="sub-head-1">Account Teams</h4>
-                <div class="loading" id="loading">
+                <div class="loading" id="loading-teams">
                   <div class="cssload-loader">
                   	<div class="cssload-inner cssload-one"></div>
                   	<div class="cssload-inner cssload-two"></div>
@@ -76,7 +83,20 @@
                   </div>
                 </div>
 
-                <div class="hide" id="load-control">
+                <div class="hide" id="load-control-teams">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <th>#</th>
+                        <th>Team Name</th>
+                        <th>Team Owner</th>
+                        <th>Members</th>
+                        <th>Created On</th>
+                      </thead>
+                      <tbody id="teamtable">
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane" id="users">
@@ -99,6 +119,7 @@
                         <th>Email</th>
                         <th>User ID</th>
                         <th>Created On</th>
+                        <th>Role</th>
                       </thead>
                       <tbody id="usertable">
                       </tbody>
