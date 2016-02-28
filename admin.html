@@ -25,7 +25,7 @@
           <a href="#" class="navbar-brand">Content Creator</a>
           <div class="dropdown">
             <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-            <ul class="dropdown-menu">
+            <ul id="dList" class="dropdown-menu">
               <li><a tabindex="-1" href="profile.html">Account Settings</a></li>
               <li class="divider"></li>
               <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
@@ -81,7 +81,8 @@
               </div>
               <div role="tabpanel" class="tab-pane" id="users">
                 <h4 id="sub-head-1">Users</h4>
-                <div class="loading" id="loading">
+
+                <div class="loading" id="loading-users">
                   <div class="cssload-loader">
                   	<div class="cssload-inner cssload-one"></div>
                   	<div class="cssload-inner cssload-two"></div>
@@ -89,11 +90,17 @@
                   </div>
                 </div>
 
-                <div class="hide" id="load-control">
+                <div class="hide" id="load-control-users">
                   <div class="table-responsive">
-                    <table class="table-hover">
-                      <tbody>
-                        
+                    <table class="table table-hover">
+                      <thead>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>User ID</th>
+                        <th>Created On</th>
+                      </thead>
+                      <tbody id="usertable">
                       </tbody>
                     </table>
                   </div>

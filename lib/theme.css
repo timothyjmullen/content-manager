@@ -114,6 +114,9 @@ footer a:hover {
 .panel-body {
   padding-top:25px;
 }
+#sub-head-1 {
+  margin-top:0;
+}
 /* LOGIN & REGISTER
 /////////////////////////////////*/
 .hide {
