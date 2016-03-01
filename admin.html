@@ -41,9 +41,9 @@
       <h3 class="hidden-xs">&nbsp;</h3>
       <div class="panel panel-solid">
           <ul class="nav nav-stacked" role="tablist">
-            <li role="presentation" class="active"><a href="#usage" aria-controls="usage" role="tab" data-toggle="tab">Usage Statistics</a></li>
-            <li role="presentation"><a href="#teams" aria-controls="teams" role="tab" data-toggle="tab">Account Teams</a></li>
-            <li role="presentation"><a href="#users" aria-controls="users" role="tab" data-toggle="tab">Users</a></li>
+            <li role="presentation" class="active"><a href="#usage" name="usage" aria-controls="usage" role="tab" data-toggle="tab">Usage Statistics</a></li>
+            <li role="presentation"><a href="#teams" name="teams" aria-controls="teams" role="tab" data-toggle="tab">Account Teams</a></li>
+            <li role="presentation"><a href="#users" name="users" aria-controls="users" role="tab" data-toggle="tab">Users</a></li>
           </ul>
       </div>
     </div>
@@ -68,11 +68,22 @@
               </div>
               <div role="tabpanel" class="tab-pane" id="teams">
                 <h4 id="sub-head-1">Create New Team</h4>
-                <form id="profile" role="form">
-                  <div class="form-group">
+                <form id="addTeam" role="form">
+                  <div class="form-group col-md-4 col-lg-4">
                       <label for="txtTeamName">Team Name</label>
-                      <input class="form-control" id="txtTeamName" placeholder="Enter team name" name="name" accept-charset="utf-8" />
+                      <input required class="form-control" id="txtTeamName" placeholder="Enter team name" name="name" accept-charset="utf-8" />
                   </div>
+                  <div class="form-group col-md-4 col-lg-4">
+                      <label for="txtTeamID">Team ID <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="This is used as a data reference, so keep it short, descriptive &amp; unique in lowercase with no special characters (ex: acx). This cannot be changed after submission."></span></label>
+                      <input required class="form-control" id="txtTeamID" placeholder="Enter team ID" name="name" accept-charset="utf-8" />
+                  </div>
+                  <div class="form-group col-md-4 col-lg-4">
+                      <label for="emTeamManager">Team Manager <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Account email must already exist in the database."></span></label>
+                      <input required class="form-control" type="email" id="emTeamManager" placeholder="Enter manager email" name="name" accept-charset="utf-8" />
+                  </div>
+                  <div class="form-group col-md-12 col-lg-12">
+                  <button type="submit" class="btn btn-cta">Add Team</button>
+                </div>
                 </form>
                 <h4 id="sub-head-1">Account Teams</h4>
                 <div class="loading" id="loading-teams">
@@ -89,7 +100,7 @@
                       <thead>
                         <th>#</th>
                         <th>Team Name</th>
-                        <th>Team Owner</th>
+                        <th>Team Manager</th>
                         <th>Members</th>
                         <th>Created On</th>
                       </thead>
