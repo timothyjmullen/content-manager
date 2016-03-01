@@ -4,7 +4,7 @@ body {
   color:#212121;
 }
 a {
-  color: #FF9800;
+  color: #212121;
 }
 a:hover {
   color:#FFC107;
@@ -37,11 +37,24 @@ hr {
 //////////////////////////////*/
 .dropdown {
   float:right;
+  position:relative;
   text-align:right;
+  padding:0 8px;
+}
+.dropdown::after {
+  clear:both;
+  content: " ";
+}
+.dropdown:hover {
+  background-color:#f0f0f0;
 }
 .dropdown-menu {
   left:auto;
   right:0;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover {
+  background-color:#f0f0f0;
+  color:#777;
 }
 .nav>li.active {
   background-color:#f0f0f0;
@@ -51,6 +64,21 @@ hr {
     min-height:50px;
     background-color:#fff;
 }
+.navbar-toggle .icon-bar {
+  background-color:#FF9800;
+}
+.navbar-toggle {
+  border: 0;
+  border-radius:0;
+  margin:0;
+  font-size:16px;
+  height:50px;
+  padding:9px 4px 8px 7px;
+  float:right;
+}
+.navbar-toggle:hover {
+  background-color:#F0F0F0;
+}
 #dLabel img {
   display:inline-block;
   vertical-align:middle;
@@ -59,18 +87,16 @@ hr {
   border-radius:20px;
   margin:10px 0;
 }
-.navbar-header {
-  width:100%
-}
 .navbar-brand {
   font-family:'Pacifico', sans-serif;
   font-size:24px;
   font-weight:300;
   height:50px;
   padding:15px 15px;
+  color: #FF9800;
 }
 .nav {
-  color:#FF9800;
+  color:#212121;
   font-size:13px;
 }
 .nav span {

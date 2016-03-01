@@ -19,21 +19,31 @@
 </head>
 <body>
 
-<header class="navbar navbar-static-top" id="top" role="banner">
-    <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="#" class="navbar-brand">Content Creator</a>
-          <div class="dropdown">
-            <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-            <ul id="dList" class="dropdown-menu">
-              <li><a tabindex="-1" href="profile.html">Account Settings</a></li>
-              <li class="divider"></li>
-              <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
+  <nav class="navbar navbar-static-top">
+      <div class="container-fluid">
+        <div class="dropdown pull-right">
+          <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+          <ul id="dList" class="dropdown-menu">
+            <li class="active"><a tabindex="-1" href="profile.html">Account Settings</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand">Content Creator</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="library.html">Library</a></li>
+              <li><a href="docs.html">Docs</a></li>
             </ul>
           </div>
-        </div>
-    </div>
-</header>
+      </div>
+  </nav>
 <div id="container" class="container-fluid">
 <!-- PROFILE -->
   <div class="row">
