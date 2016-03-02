@@ -19,99 +19,137 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-static-top">
-      <div class="container-fluid">
-        <div class="dropdown pull-right">
-          <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-          <ul id="dList" class="dropdown-menu">
-            <li class="active"><a tabindex="-1" href="profile.html">Account Settings</a></li>
-            <li class="divider"></li>
-            <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
-          </ul>
-        </div>
-          <div class="navbar-header">
-            <a href="#" class="navbar-brand">Content Creator</a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="library.html">Library</a></li>
-              <li><a href="docs.html">Docs</a></li>
-            </ul>
-          </div>
-      </div>
-  </nav>
+<nav class="navbar navbar-static-top">
+  <div class="container-fluid">
+    <div class="dropdown pull-right">
+      <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+      <ul id="dList" class="dropdown-menu">
+        <li class="active"><a tabindex="-1" href="profile.html">Account Settings</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
+      </ul>
+    </div>
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Content Creator</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="library.html">Library</a></li>
+        <li><a href="docs.html">Docs</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <div id="container" class="container-fluid">
 <!-- PROFILE -->
   <div class="row">
     <div id="profile-nav" class="col-sm-2 col-md-2 col-lg-2">
       <h3 class="hidden-xs">&nbsp;</h3>
       <div class="panel panel-solid">
-          <ul class="nav nav-stacked">
-            <li role="presentation" class="active"><a href="#">Profile</a></li>
-            <li role="presentation"><a href="#">Team</a></li>
-            <li role="presentation"><a href="#">Groups</a></li>
+          <ul class="nav nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#profile" name="profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#team" name="team" aria-controls="team" role="tab" data-toggle="tab">Team</a></li>
+            <li role="presentation"><a href="#groups" name="groups" aria-controls="groups" role="tab" data-toggle="tab">Groups</a></li>
           </ul>
       </div>
     </div>
     <div id="profile-content" class="col-sm-10 col-md-10 col-lg-10">
-      <h3>Update Profile Information</h3>
-      <div class="panel panel-solid">
-        <div class="panel-body">
-          <form id="profile" role="form">
-          <div class="loading" id="loading">
-            <div class="cssload-loader">
-            	<div class="cssload-inner cssload-one"></div>
-            	<div class="cssload-inner cssload-two"></div>
-            	<div class="cssload-inner cssload-three"></div>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="profile">
+          <h3>Update Profile Information</h3>
+          <div class="panel panel-solid">
+            <div class="panel-body">
+              <form id="profile" role="form">
+              <div class="loading" id="loading">
+                <div class="cssload-loader">
+                	<div class="cssload-inner cssload-one"></div>
+                	<div class="cssload-inner cssload-two"></div>
+                	<div class="cssload-inner cssload-three"></div>
+                </div>
+              </div>
+              <div class="hide" id="load-control">
+                  <div class="col-md-12">
+                      <a href="http://www.gravatar.com" style="display:inline-block;font-size:11px;">
+                    <div id="grav"></div>
+                    Change</a>
+                    <br /><br />
+                  </div>
+                  <div class="col-md-6 col-lg-6">
+                     <div class="form-group">
+                         <label for="txtRegEmail">Name</label>
+                         <input class="form-control" id="txtName" placeholder="Enter name" name="name" accept-charset="utf-8" />
+                     </div>
+                    <div class="form-group">
+                        <label for="txtRegEmail">Email address</label>
+                        <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="txtRegPass">Current Password</label>
+                        <input required type="password" class="form-control" id="txtPassUp" placeholder="Password" name="password" accept-charset="utf-8" />
+                    </div>
+                    <button type="submit" class="btn btn-cta">Save Changes</button><br /><br />
+                  </div>
+                </form>
+                <form id="profile-pass" role="form">
+                  <div class="col-md-6 col-lg-6">
+
+                    <div class="form-group">
+                        <label for="txtRegPass">Update Password</label>
+                        <input required type="password" class="form-control" id="txtPass" placeholder="Current Password" name="password" accept-charset="utf-8" />
+                        <input type="password" class="form-control" id="txtPass2" style="margin-top:15px;" placeholder="New Password" name="password" accept-charset="utf-8" />
+                        <input type="password" class="form-control" id="txtPass3" style="margin-top:15px;" placeholder="Confirm New Password" name="password2" accept-charset="utf-8" />
+                    </div>
+                    <button type="submit" class="btn btn-cta">Change Password</button>
+                  </div>
+                </form>
+                <!-- / PROFILE -->
+                <div class="col-md-12 col-lg-12">
+                  <hr />
+                  <!-- ALERT BOX -->
+                  <div id="alert" class="alert" role="alert">
+                    Current password is required for both profile updates and password changes.
+                  </div>
+                  <!-- / ALERT BOX -->
+                </div>
+              </div>
             </div>
           </div>
-          <div class="hide" id="load-control">
-              <div class="col-md-12">
-                  <a href="http://www.gravatar.com" style="display:inline-block;font-size:11px;">
-                <div id="grav"></div>
-                Change</a>
-                <br /><br />
-              </div>
-              <div class="col-md-6 col-lg-6">
-                 <div class="form-group">
-                     <label for="txtRegEmail">Name</label>
-                     <input class="form-control" id="txtName" placeholder="Enter name" name="name" accept-charset="utf-8" />
-                 </div>
-                <div class="form-group">
-                    <label for="txtRegEmail">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
-                </div>
-                <div class="form-group">
-                    <label for="txtRegPass">Current Password</label>
-                    <input required type="password" class="form-control" id="txtPassUp" placeholder="Password" name="password" accept-charset="utf-8" />
-                </div>
-                <button type="submit" class="btn btn-cta">Save Changes</button><br /><br />
-              </div>
-            </form>
-            <form id="profile-pass" role="form">
-              <div class="col-md-6 col-lg-6">
+        </div>
+        <div role="tabpanel" class="tab-pane" id="team">
+          <h3>Team Information</h3>
+          <div class="panel panel-solid">
+            <div class="panel-body">
 
-                <div class="form-group">
-                    <label for="txtRegPass">Update Password</label>
-                    <input required type="password" class="form-control" id="txtPass" placeholder="Current Password" name="password" accept-charset="utf-8" />
-                    <input type="password" class="form-control" id="txtPass2" style="margin-top:15px;" placeholder="New Password" name="password" accept-charset="utf-8" />
-                    <input type="password" class="form-control" id="txtPass3" style="margin-top:15px;" placeholder="Confirm New Password" name="password2" accept-charset="utf-8" />
+              <!-- / TEAM -->
+              <div class="col-md-12 col-lg-12">
+                <hr />
+                <!-- ALERT BOX -->
+                <div id="alertteam" class="alert" role="alert">
+
                 </div>
-                <button type="submit" class="btn btn-cta">Change Password</button>
+                <!-- / ALERT BOX -->
               </div>
-            </form>
-            <!-- / PROFILE -->
-            <div class="col-md-12 col-lg-12">
-              <hr />
-              <!-- ALERT BOX -->
-              <div id="alert" class="alert" role="alert">
-                Current password is required for both profile updates and password changes.
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="groups">
+          <h3>Group Information</h3>
+          <div class="panel panel-solid">
+            <div class="panel-body">
+              <p>FPO</p>
+              <!-- / GROUP -->
+              <div class="col-md-12 col-lg-12">
+                <hr />
+                <!-- ALERT BOX -->
+                <div id="alertteam" class="alert" role="alert">
+
+                </div>
+                <!-- / ALERT BOX -->
               </div>
-              <!-- / ALERT BOX -->
             </div>
           </div>
         </div>
@@ -122,7 +160,7 @@
 <footer class="foot">
   <p class="text-center">
     &copy;<script>document.write(new Date().getFullYear())</script> Tim Mullen. All rights reserved.<br />
-    <a href="#">Cookie Policy</a> &bull; <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookie Policy</a> &bull; <a href="privacy.html">Privacy Policy</a>
   </p>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

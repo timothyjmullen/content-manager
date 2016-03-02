@@ -78,6 +78,7 @@ hr {
 }
 .navbar-toggle:hover {
   background-color:#F0F0F0;
+  color:#FF9800;
 }
 #dLabel img {
   display:inline-block;

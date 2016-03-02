@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Content Creator</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Manage your email content and templates in an easy builder." />
+  <meta name="keywords" content="content manager, email" />
+  <meta name="author" content="Tim Mullen" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="lib/theme.css"/>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,200|Pacifico' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+  <script src="lib/openauth.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-static-top">
+      <div class="container-fluid">
+        <div class="dropdown pull-right">
+          <span id="dLabel" class="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+          <ul id="dList" class="dropdown-menu">
+            <li><a tabindex="-1" href="profile.html">Account Settings</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand">Content Creator</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="library.html">Library</a></li>
+              <li><a href="docs.html">Docs</a></li>
+            </ul>
+          </div>
+      </div>
+  </nav>
+<div id="container" class="container-fluid">
+<!-- PROFILE -->
+  <div class="row">
+    <div id="profile-content" class="col-md-12 col-lg-12">
+      <h3>Cookie Policy</h3>
+      <div class="panel panel-solid">
+        <div class="panel-body">
+
+              <div class="col-md-12">
+                <p>
+                    To make this site work properly, we sometimes place small data files called cookies on your device.
+                </p>
+                <h4>What are cookies?</h4>
+                <p>
+                  A cookie is a small text file that a website saves on your computer or mobile device when you visit the site. It enables the website to remember your actions and preferences (such as login, language, font size and other display preferences) over a period of time, so you don’t have to keep re-entering them whenever you come back to the site or browse from one page to another.
+                </p>
+                <h4>How do we use cookies?</h4>
+                <p>
+                  A number of our pages use cookies:
+                  <ul>
+                    <li>To remember your preferences.</li>
+                    <li>To gather statistics on general usage for further improvement.</li>
+                  </ul>
+                </p>
+                <p>
+                  Enabling these cookies is not strictly necessary for the website to work but it will provide you with a better browsing experience. You can delete or block these cookies, but if you do that some features of this site may not work as intended.
+                </p>
+                <p>
+                  The cookie-related information is not used to identify you personally and the pattern data is fully under our control. These cookies are not used for any purpose other than those described here.
+                </p>
+                <h4>How to control cookies</h4>
+                <p>
+                  You can control and/or delete cookies as you wish – for details, see <a href="http://www.aboutcookies.org" target="_blank">aboutcookies.org</a>. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.
+                </p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="foot">
+  <p class="text-center">
+    &copy;<script>document.write(new Date().getFullYear())</script> Tim Mullen. All rights reserved.<br />
+    <a href="cookies.html">Cookie Policy</a> &bull; <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
