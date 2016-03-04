@@ -195,7 +195,13 @@ footer a:hover {
   box-shadow:none;
   -webkit-box-shadow:none;
 }
-/* LAODING
+.team-select {
+  min-width:100px;
+}
+.clear {
+  clear:both;
+}
+/* LOADING
 //////////////////////////////*/
 .loading {
   font-size:50px;
