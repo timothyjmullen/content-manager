@@ -123,22 +123,50 @@
           <h3>Team Information</h3>
           <div class="panel panel-solid">
             <div class="panel-body">
-              <div class="col-sm-3 col-xs-12 col-md-3 col-lg-3 pull-right">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12 col-md-4 col-lg-3 pull-right">
+                <div class="form-group">
                   <select id="teamSelect" class="form-control team-select">
 
                   </select>
+                </div>
               </div>
-              <br />
-              <table class="table table-hover">
-                <thead>
-                  <th>#</th>
-                  <th>Member</th>
-                  <th>Permission</th>
-                  <th></th>
-                </thead>
-                <tbody id="teamtable">
-                </tbody>
-              </table>
+              <form id="add-member" role="form">
+                <div class="col-sm-8 col-xs-12 col-md-8 col-lg-3 pull-left">
+
+                    <div class="input-group col-sm-6 col-xs-12 col-md-6 col-lg-3 pull-left">
+                      <input type="email" placeholder="User Email" class="form-control" id="new-member"/>
+                    </div>
+
+                    <div class="form-group pull-left">
+                      <select id="permissionSelect" class="form-control team-select">
+                        <option>admin</option>
+                        <option>read</option>
+                        <option>write</option>
+                      </select>
+                    </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-cta pull-left">Add Member</button>
+                  </div>
+
+                </div>
+              </form>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-lg-12 clear">
+                  <table class="table table-hover team-table">
+                    <thead>
+                      <th>#</th>
+                      <th>Member</th>
+                      <th>Permission</th>
+                      <th></th>
+                    </thead>
+                    <tbody id="teamtable">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
               <!-- / TEAM -->
               <div class="col-md-12 col-lg-12 clear">
                 <hr />

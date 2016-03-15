@@ -197,9 +197,16 @@ footer a:hover {
 }
 .team-select {
   min-width:100px;
+
 }
+
 .clear {
   clear:both;
+}
+/* TABLE
+//////////////////////////////*/
+.team-table {
+  margin-top:30px;
 }
 /* LOADING
 //////////////////////////////*/
