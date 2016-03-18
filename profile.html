@@ -18,6 +18,24 @@
   <script src="lib/genauth.js"></script>
 </head>
 <body>
+  <!-- MODALS -->
+  <div class="modal conf-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Remove Member?</h4>
+      </div>
+      <!--<div class="modal-body">
+        ...
+      </div>-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" data-dismiss="modal" id="modal-confirm" class="btn btn-cta">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <nav class="navbar navbar-static-top">
   <div class="container-fluid">
@@ -44,6 +62,8 @@
     </div>
   </div>
 </nav>
+
+
 <div id="container" class="container-fluid">
 <!-- PROFILE -->
   <div class="row">
@@ -123,6 +143,14 @@
           <h3>Team Information</h3>
           <div class="panel panel-solid">
             <div class="panel-body">
+              <div class="loading" id="loading-team">
+                <div class="cssload-loader">
+                	<div class="cssload-inner cssload-one"></div>
+                	<div class="cssload-inner cssload-two"></div>
+                	<div class="cssload-inner cssload-three"></div>
+                </div>
+              </div>
+              <div class="hide" id="team-load-control">
             <div class="row">
               <div class="col-sm-4 col-xs-12 col-md-4 col-lg-3 pull-right">
                 <div class="form-group">
@@ -167,6 +195,7 @@
                   </table>
                 </div>
               </div>
+            </div>
               <!-- / TEAM -->
               <div class="col-md-12 col-lg-12 clear">
                 <hr />

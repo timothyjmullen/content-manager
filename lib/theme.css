@@ -203,6 +203,12 @@ footer a:hover {
 .clear {
   clear:both;
 }
+/* MODALS
+//////////////////////////////*/
+.modal-content {
+  border-radius:0px;
+  box-shadow: none;
+}
 /* TABLE
 //////////////////////////////*/
 .team-table {
