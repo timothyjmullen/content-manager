@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title>Content Creator | Edit Template</title>
+  <title>Content Creator | Template Editor</title>
   <meta charset="utf-8" />
   <meta name="description" content="Manage your email content and templates in an easy builder." />
   <meta name="keywords" content="content manager, email" />
@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="library.html">Library</a></li>
-              <li class="active"><a href="docs.html">Docs</a></li>
+              <li><a href="docs.html">Docs</a></li>
             </ul>
           </div>
       </div>
@@ -48,10 +48,22 @@
 <!-- PROFILE -->
   <div class="row">
     <div id="profile-content" class="col-md-12 col-lg-12">
-      <h3>Edit Template</h3>
+      <h3>Template Editor</h3>
       <div class="panel panel-solid">
         <div class="panel-body">
+          <div class="col-md-12 col-lg-12">
+            <!-- BUTTON BOX -->
+            <h4 id="template-name" contenteditable class="template-name">New Template</h4>
+            <!-- / BUTTON BOX -->
+            <hr />
+          </div>
 
+          <pre id="editor">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
             <!-- / PROFILE -->
             <div class="col-md-12 col-lg-12">
               <hr />
@@ -75,6 +87,15 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="lib/profile.js"></script>
+<!--<script src="lib/template.js"></script>-->
+<script src="lib/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.getSession().setMode("ace/mode/html");
+    editor.getSession().setUseWrapMode(true);
+    editor.setShowPrintMargin(false);
+    editor.getSession().setTabSize(2);
+</script>
 </body>
 </html>
