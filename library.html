@@ -59,17 +59,28 @@
               <div class="col-sm-3 col-xs-12 col-md-3 col-lg-3 pull-right">
                 <div class="form-group">
                   <select id="teamSelect" class="form-control team-select">
-                    <option>test</option>
+                    <option>My Templates</option>
                   </select>
                 </div>
               </div>
               <div class="col-sm-3 col-xs-12 col-md-3 col-lg-3 pull-left">
                 <h4>Templates</h4>
               </div>
-
+              <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                <table class="table table-hover team-table">
+                  <thead>
+                    <th>#</th>
+                    <th>Template</th>
+                    <th>Modified</th>
+                    <th><a class="btn btn-cta pull-right" href="template.html">New Template</a></th>
+                  </thead>
+                  <tbody id="teamtable">
+                  </tbody>
+                </table>
+              </div>
             <!-- / LIBRARY -->
-            <div class="col-md-12 col-lg-12">
-              <hr />
+            <div class="col-md-12 col-lg-12 clearfix">
+              <hr class="clear" />
               <!-- ALERT BOX -->
               <div id="alert" class="alert" role="alert">
 
@@ -85,7 +96,7 @@
 <footer class="foot">
   <p class="text-center">
     &copy;<script>document.write(new Date().getFullYear())</script> Tim Mullen. All rights reserved.<br />
-    <a href="#">Cookie Policy</a> &bull; <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookie Policy</a> &bull; <a href="privacy.html">Privacy Policy</a>
   </p>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
