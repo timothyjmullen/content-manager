@@ -262,9 +262,21 @@ pre {
 }
 /* SPIN ISH
 //////////////////////////////*/
+.loading-all {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  opacity: .9;
+  height:100%;
+  z-index:99999;
+  background-color:#fff;
+}
 .cssload-loader {
 	position: relative;
 	left: calc(50% - 31px);
+  top: calc(50% - 62px);
 	width: 62px;
 	height: 62px;
 	border-radius: 50%;

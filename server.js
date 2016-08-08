@@ -39,7 +39,7 @@ var SampleApp = function() {
      */
     self.populateCache = function() {
         if (typeof self.zcache === "undefined") {
-            self.zcache = { 'login.html': '' };
+            self.zcache = { 'library.html': '' };
         }
 
         //  Local cache for static content.
@@ -121,7 +121,7 @@ var SampleApp = function() {
 
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('login.html') );
+            res.send(self.cache_get('library.html') );
         };
 
         self.routes['/login'] = function(req, res) {

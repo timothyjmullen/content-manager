@@ -10,13 +10,32 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDRfKpMBM5TTL4lHVK3jmt-ry8t37AepzE",
+    authDomain: "brilliant-torch-8379.firebaseapp.com",
+    databaseURL: "https://brilliant-torch-8379.firebaseio.com",
+    storageBucket: "brilliant-torch-8379.appspot.com",
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="lib/adminauth.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="lib/theme.css"/>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,200|Pacifico' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+  <div class="loading-all" id="loading-all">
+    <div class="cssload-loader">
+      <div class="cssload-inner cssload-one"></div>
+      <div class="cssload-inner cssload-two"></div>
+      <div class="cssload-inner cssload-three"></div>
+    </div>
+  </div>
   <nav class="navbar navbar-static-top">
       <div class="container-fluid">
         <div class="dropdown pull-right">
@@ -168,20 +187,10 @@
     <a href="cookies">Cookie Policy</a> &bull; <a href="privacy">Privacy Policy</a>
   </p>
 </footer>
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script>
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDRfKpMBM5TTL4lHVK3jmt-ry8t37AepzE",
-  authDomain: "brilliant-torch-8379.firebaseapp.com",
-  databaseURL: "https://brilliant-torch-8379.firebaseio.com",
-  storageBucket: "brilliant-torch-8379.appspot.com",
-};
-firebase.initializeApp(config);
-</script>
-<script src="lib/adminauth.js"></script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="lib/admin.js"></script>
 </body>
 </html>
