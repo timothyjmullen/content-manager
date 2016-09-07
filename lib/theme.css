@@ -1,7 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   background-color:#e6e6e6;
   font-family:'Open Sans', Arial, sans-serif;
   color:#212121;
+  margin-bottom: 110px;
 }
 a {
   color: #212121;
@@ -144,6 +149,9 @@ hr {
 }
 footer {
   margin-top:20px;
+  position: absolute;
+  bottom: 0;
+  width:100%;
 }
 footer a {
   color:#fff;

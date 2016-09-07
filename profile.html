@@ -23,7 +23,7 @@
   };
   firebase.initializeApp(config);
   </script>
-  <script src="lib/genauth.js"></script>
+  <script src="lib/setauth.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="lib/theme.css"/>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,200|Pacifico' rel='stylesheet' type='text/css'>
@@ -120,16 +120,12 @@
                   </div>
                   <div class="col-md-6 col-lg-6">
                      <div class="form-group">
-                         <label for="txtRegEmail">Name</label>
+                         <label for="txtRegEmail">Display Name</label>
                          <input class="form-control" id="txtName" placeholder="Enter name" name="name" accept-charset="utf-8" />
                      </div>
                     <div class="form-group">
-                        <label for="txtRegEmail">Email address</label>
+                        <label for="txtRegEmail">Email Address</label>
                         <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" accept-charset="utf-8" />
-                    </div>
-                    <div class="form-group">
-                        <label for="txtRegPass">Current Password</label>
-                        <input required type="password" class="form-control" id="txtPassUp" placeholder="Password" name="password" accept-charset="utf-8" />
                     </div>
                     <button type="submit" class="btn btn-cta">Save Changes</button><br /><br />
                   </div>
@@ -151,7 +147,7 @@
                   <hr />
                   <!-- ALERT BOX -->
                   <div id="alert" class="alert" role="alert">
-                    Current password is required for both profile updates and password changes.
+
                   </div>
                   <!-- / ALERT BOX -->
                 </div>
